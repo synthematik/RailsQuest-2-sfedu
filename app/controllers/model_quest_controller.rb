@@ -6,6 +6,8 @@ end
 def step2
   @students = Student.all
   @courses = Course.all
+
+
 end
 
 def step3
@@ -13,7 +15,7 @@ def step3
 end
 
 def step4
-   @students = Student.all 
+   @students = Student.all
 end
 
 def step5

@@ -10,20 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_16_055735) do
-
+ActiveRecord::Schema[7.1].define(version: 2022_11_16_055735) do
   create_table "courses", force: :cascade do |t|
     t.string "title"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "enrollments", force: :cascade do |t|
     t.integer "student_id"
     t.integer "course_id"
     t.string "status"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_enrollments_on_course_id"
     t.index ["student_id"], name: "index_enrollments_on_student_id"
   end
@@ -31,15 +30,15 @@ ActiveRecord::Schema.define(version: 2022_11_16_055735) do
   create_table "grades", force: :cascade do |t|
     t.integer "enrollment_id"
     t.integer "score"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["enrollment_id"], name: "index_grades_on_enrollment_id"
   end
 
   create_table "students", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
