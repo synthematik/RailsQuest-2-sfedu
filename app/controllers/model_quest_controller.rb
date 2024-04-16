@@ -19,7 +19,9 @@ def step4
 end
 
 def step5
-  @courses_groups = [] #[{title: 'A', name: 3},...]
+  @courses = Course.sorted_by_students_count
+
+  @courses_groups = @courses.map { |course| { title: course.title, cnt: course.cnt } }
 end
   
  def final
