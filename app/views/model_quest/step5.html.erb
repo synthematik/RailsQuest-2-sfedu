@@ -20,8 +20,8 @@
     </div>
     <div class="actual">
     <ul>
-      <%- @courses_groups.each do |cg| %>
-      <li><%= "На #{cg[:title]} записано #{cg[:cnt]}" %></li>
+      <%- @courses_group.each do |cg| %>
+      <li><%= "На #{cg['title']} записано #{cg['cnt']}." %></li>
       <%- end %>  
     </ul>
     </div>
